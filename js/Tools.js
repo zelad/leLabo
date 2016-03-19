@@ -24,3 +24,27 @@ var rxTools = {
     }
         
 };
+/**
+ * Class permettant d'enregistrer un fichier
+ */
+var saveFile = {
+		getFile : function (){
+			document.querySelector('input[type=file]').onchange = function () {
+			    var file = this.files[0];
+			};
+		},
+		
+		saveToDisk : function (fileUrl, fileName) {
+		    var save = document.createElement('a');
+		    save.href = fileUrl;
+		    save.target = '_blank';
+		    save.download = fileName || fileUrl;
+
+		    var event = document.createEvent('Event');
+		    event.initEvent('click', true, true);
+
+		    save.dispatchEvent(event);
+		    (window.URL || window.webkitURL).revokeObjectURL(save.href);
+		}
+}
+
