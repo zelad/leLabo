@@ -13,11 +13,12 @@ app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout, WebSock
 	
 	$scope.fireWStest = function(){
 		var fichier = document.getElementById('fileinput').files;
+		
 		charge = new FileReader();
-		charge.readAsDataURL(fichier[0]);
+//		charge.readAsDataURL(fichier[0]);//ceci je peux l'enregistrer dans un fichier
+		charge.readAsText(fichier[0]);//De cette manière, "fileDataURL" devient lisible!
 		
 		charge.onload = function (event) {
-			console.info($scope.ngFile);
 	        var fileDataURL = event.target.result; // it is Data URL...can be saved to disk
 //	        saveFile.saveToDisk(fileDataURL, "fichierTest.json");
 	    };
