@@ -25,9 +25,9 @@ app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout, WebSock
 
 
 /**
- * Apparition d'éléments suite à  une "event"
+ * Apparition d'Ã©lÃ©ments suite Ã  une "event"
  */
-//MAJ des listes de catégorie
+//MAJ des listes de catÃ©gorie
 	$scope.majCatego = function (list) {
 		$timeout(function () {
 			$scope.categories = list;
@@ -37,4 +37,4 @@ app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout, WebSock
 });
 
 
-//TODO @ICI: vidéo n°7 à 0:02:00 pour commencer à tester "$http" et "$q"
+//TODO @ICI: vidÃ©o nÂ°7 Ã  0:02:00 pour commencer Ã  tester "$http" et "$q"
