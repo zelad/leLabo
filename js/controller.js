@@ -17,8 +17,9 @@ app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout, WebSock
 		charge.readAsDataURL(fichier[0]);
 		
 		charge.onload = function (event) {
+			console.info($scope.ngFile);
 	        var fileDataURL = event.target.result; // it is Data URL...can be saved to disk
-	        saveFile.saveToDisk(fileDataURL, "fichierTest.json");
+//	        saveFile.saveToDisk(fileDataURL, "fichierTest.json");
 	    };
 	};
 
