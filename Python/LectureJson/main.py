@@ -9,11 +9,13 @@ from pprint import pprint
 if __name__ == '__main__':
     from pprint import pprint
 
-    with open('aFile.json') as data_file:    
+#     with open('aFile.json') as data_file:
+    with open('bookmark.json') as data_file:#test de lecture de sav FireFox 
         data = json.load(data_file)
     
     pprint(data)
-    
-    print(data["maps"][0]["id"])
-    pprint(data["masks"]["id"])
-    pprint(data["om_points"])
+    print("exemple de parcourt de dictionnaire:")
+    pprint(data["children"][14]["children"][2]["children"][0]["children"][0])#montre le dossier Barre Personnel / [01]Tech / [01]Projet / Outils Favoris
+#     print(data["maps"][0]["id"])
+#     pprint(data["masks"]["id"])
+#     pprint(data["om_points"])
