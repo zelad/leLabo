@@ -5,10 +5,12 @@ Created on 19 avr. 2016
 '''
 import json
 from pprint import pprint
+import os
 
 if __name__ == '__main__':
     from pprint import pprint
 
+#     os.chdir('/')#Obligation de donner le chemin du fichier avec le QPython
 #     with open('aFile.json') as data_file:
     with open('bookmark.json') as data_file:#test de lecture de sav FireFox 
         data = json.load(data_file)
