@@ -1,4 +1,28 @@
 /**
+ * Test d'enregistrement de fichier
+ */
+app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout) {
+	var charge;
+	
+//	$scope.foo = [
+//	              {username: "rbeck", content:"bienvenue"},
+//	              {username: "sthomas", content:"WTF"}];
+	
+	$scope.fireWStest = function(){
+		var fichier = document.getElementById('fileinput').files;
+		
+		charge = new FileReader();
+//		charge.readAsDataURL(fichier[0]);//ceci je peux l'enregistrer dans un fichier
+		charge.readAsText(fichier[0]);//De cette manière, "fileDataURL" devient lisible!
+		
+		charge.onload = function (event) {
+	        var fileDataURL = event.target.result; // it is Data URL...can be saved to disk
+//	        saveFile.saveToDisk(fileDataURL, "fichierTest.json");
+	    };
+	};
+});
+
+/**
  * Ensemble d'exemple de gestion de JSONP dans Angular
  */
 /**déclaration HTML:
