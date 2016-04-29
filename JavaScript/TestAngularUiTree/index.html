@@ -5,6 +5,9 @@
 	<title>Le Labo</title>
 	<!-- CSS -->
 	    <link rel="stylesheet" type="text/css" href="css/angular-ui-tree.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+<!--   <link rel="stylesheet" href="source/angular-ui-tree.css"> -->
+		<link rel="stylesheet" href="css/app.css">
 	<!-- Library -->
 		<script src="lib/angular/angular.js"></script>
 		<script src="lib/angular/angular-route.min.js"></script>">
@@ -30,24 +33,26 @@
 
 <body ng-app="demoApp">
 	<div ng-controller="FirstTryCtrl">
-<!-- Nested node template -->
+	
+<!-- 	fonctionne mais manque de "cosmétique"
 <script type="text/ng-template" id="nodes_renderer.html">
-  <div ui-tree-handle>
+  <div ui-tree-handle class="tree-node tree-node-content">
     {{node.title}}
   </div>
-  <ol ui-tree-nodes="" ng-model="node.nodes">
+  <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
     <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
     </li>
   </ol>
 </script>
-		<div ui-tree>
+		<div ui-tree id="tree-root">
 			<ol ui-tree-nodes="" ng-model="data" id="tree-root">
 				<li ng-repeat="node in data" ui-tree-node
 					ng-include="'nodes_renderer.html'"></li>
 			</ol>
 		</div>
-	</div>
-	<!-- 
+
+ -->	
+ 
 <script type="text/ng-template" id="nodes_renderer.html">
   <div ui-tree-handle class="tree-node tree-node-content">
     <a class="btn btn-success btn-xs" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)"><span
@@ -72,26 +77,7 @@
         <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'"></li>
       </ol>
     </div>
- -->
 
-
-	<!-- 
- Ceci fonctionne mais avec un nombre limité de lvl
-  -->
-	<!-- 
-		<div ui-tree id="tree-root" class="angular-ui-tree">
-			<ol ui-tree-nodes="" ng-model="data">
-				<li ng-repeat="item in data" ui-tree-node>
-					<div ui-tree-handle>{{item.title}}</div>
-
-					<ol ui-tree-nodes="" ng-model="item.items">
-						<li ng-repeat="subItem in item.items" ui-tree-node>
-							<div ui-tree-handle>{{subItem.title}}</div>
-						</li>
-					</ol>
-				</li>
-			</ol>
-		</div>
- -->
+	</div>
 </body>
 </html>
