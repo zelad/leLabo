@@ -2,8 +2,7 @@
  * Test Angular UI-Tree
  */
 
-//angular.module('demoApp', [ 'ui.tree', 'ngRoute', 'ui.bootstrap' ]).controller("FirstTryCtrl",
-angular.module('demoApp', ['ui.bootstrap']).controller("FirstTryCtrl",
+angular.module('demoApp', ['ui.bootstrap']).controller("FirstTryCtrlOld",
 		function($scope, $rootScope, $timeout) {
 
     $scope.remove = function (scope) {
