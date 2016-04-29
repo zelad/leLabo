@@ -2,7 +2,8 @@
  * Test Angular UI-Tree
  */
 
-angular.module('demoApp').controller("FirstTryCtrl",
+//angular.module('demoApp', [ 'ui.tree', 'ngRoute', 'ui.bootstrap' ]).controller("FirstTryCtrl",
+angular.module('demoApp', ['ui.bootstrap']).controller("FirstTryCtrl",
 		function($scope, $rootScope, $timeout) {
 
 			$scope.data = [ {
@@ -44,9 +45,9 @@ angular.module('demoApp').controller("FirstTryCtrl",
 				} ]
 			} ];
 
-			/**
-			 * Apparition d'éléments suite à une "event"
-			 */
+/**
+ * Apparition d'éléments suite à une "event"
+ */
 			//MAJ des listes de catégorie
 			$scope.majCatego = function(list) {
 				$timeout(function() {
