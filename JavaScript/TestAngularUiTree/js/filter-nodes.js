@@ -2,18 +2,9 @@
   'use strict';
 
   angular.module('demoApp')
-    .controller('BasicExampleCtrl', ['$scope', function ($scope) {
+    .controller('FilterNodesCtrl', ['$scope', function ($scope) {
       $scope.remove = function (scope) {
         scope.remove();
-      };
-
-      $scope.toggle = function (scope) {
-        scope.toggle();
-      };
-
-      $scope.moveLastToTheBeginning = function () {
-        var a = $scope.data.pop();
-        $scope.data.splice(0, 0, a);
       };
 
       $scope.newSubItem = function (scope) {
@@ -25,12 +16,14 @@
         });
       };
 
-      $scope.collapseAll = function () {
-        $scope.$broadcast('angular-ui-tree:collapse-all');
+      $scope.visible = function (item) {
+        return !($scope.query && $scope.query.length > 0
+        && item.title.indexOf($scope.query) == -1);
+
       };
 
-      $scope.expandAll = function () {
-        $scope.$broadcast('angular-ui-tree:expand-all');
+      $scope.findNodes = function () {
+
       };
 
       $scope.data = [{
@@ -57,7 +50,6 @@
       }, {
         'id': 2,
         'title': 'node2',
-        'nodrop': true, // An arbitrary property to check in custom template for nodrop-enabled
         'nodes': [
           {
             'id': 21,
@@ -77,6 +69,16 @@
           {
             'id': 31,
             'title': 'node3.1',
+            'nodes': []
+          }
+        ]
+      }, {
+        'id': 4,
+        'title': 'node4',
+        'nodes': [
+          {
+            'id': 41,
+            'title': 'node4.1',
             'nodes': []
           }
         ]
