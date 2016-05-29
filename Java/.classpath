@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/template JAVA WebSocket/lib/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/template JAVA WebSocket/lib/jackson-databind-2.7.4.jar" sourcepath="lib"/>
-	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/template JAVA WebSocket/lib/jackson-core-2.7.4.jar"/>
-	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/template JAVA WebSocket/lib/jackson-annotations-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/leLabo/Java/lib/jackson-databind-2.7.4.jar" sourcepath="lib"/>
+	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/leLabo/Java/lib/jackson-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/leLabo/Java/lib/jackson-annotations-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/Archives/A Vas/Tech/Codes/GitKraken/leLabo/Java/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
