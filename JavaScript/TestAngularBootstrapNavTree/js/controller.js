@@ -8,9 +8,16 @@ app.controller("uneFonctionCtrl", function ($scope, $rootScope,$timeout, WebSock
 	var charge;
 
 $scope.data = [{
-	label: 'Languages',
-	children: ['Jade','Less','Coffeescript']
-	}];
+		label: 'Languages',
+		children: ['Jade','Less','Coffeescript'],
+	},
+	{
+		label: 'autre',
+	},
+	{
+		label: 'encore un autre'
+	}
+	];
 /**	
 	$scope.foo = [
               {username: "rbeck", content:"bienvenue"},
