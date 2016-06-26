@@ -47,7 +47,7 @@ $scope.data = [{
 //MAJ des listes de catégorie
 	$scope.majCatego = function (list) {
 		$timeout(function () {
-			$scope.categories = list;
+			$scope.data = list;
 		}, 100);
 	}
 	
