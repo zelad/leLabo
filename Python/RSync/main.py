@@ -5,6 +5,5 @@ Created on 22 juin 2016
 '''
 import rsync
 # rsync.main("-r dirTest backUpDirTest")
-rsync.main('-r "dirTest" "backUpDirTest"')
-rsync.printUsage()
+rsync.main(["-r","dirTest","backUpDirTest"])
 print "ok!"

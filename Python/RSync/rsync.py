@@ -515,4 +515,5 @@ def main(args):
 	return 0
 
 if __name__ == "__main__":
+# 	print(sys.argv[1:])#ajouté pour savoir comment sont codé les arguments!
 	sys.exit(main(sys.argv[1:]))
