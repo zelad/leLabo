@@ -1,6 +1,7 @@
-/com/
+/.gitignore
 /cardsInGame.json
 /data.json
+/com/
 /originalExempleSimpleJson.json
 /unJson.json
 /v2.json
