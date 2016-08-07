@@ -14,8 +14,7 @@ import sys
 from NodeBookM import NodeBookM
 
 def setDB(node,cur):
-    print node.parent
-#@ICI: transformer les "node['type']" en "node.type"
+    global countBP
     if node.type.find('text/x-moz-place-container') != -1:
     #Ici nous avons un dossier
         print node.title
@@ -23,11 +22,14 @@ def setDB(node,cur):
         print node.dateAdded
         print node.lastModified
         print node.parent
+        print countBP
+        countBP += 1
 #indice:
 #u' '.join((agent_contact, agent_telno)).encode('utf-8')
 #http://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
-        values = "'{0}','{1}','{2}','{3}','{4}'".format(node.title,node.index,node.dateAdded,node.lastModified,node.parent)
-        cur.execute("INSERT INTO folder (title, position, dateAdded, lastModified, parent) VALUES ("+values+")")
+#         values = "'{0}','{1}','{2}','{3}','{4}'".format(node.title.encode('utf-8'),node.index,node.dateAdded,node.lastModified,node.parent)
+#         cur.execute("INSERT INTO folder (title, position, dateAdded, lastModified, parent) VALUES ("+values+")")
+        cur.execute("INSERT INTO folder (title, position, dateAdded, lastModified, parent) VALUES (?,?,?,?,?)",(node.title,node.index,node.dateAdded,node.lastModified,node.parent))
 #         dictTreeNode['label'] = node['title']
         if node.children:#si la liste est non vide. Rajouter "not" devant "if" pour tester qu elle est vide
             for node in node.children:
@@ -57,7 +59,15 @@ def getNodeBookM(listNodesBookM):
     #Création des objets node, contenant tous les infos des favoris
         listObjNodeBookM.append(NodeBookM(node))
     return listObjNodeBookM
-
+'''
+Tests
+'''
+countBP = 0
+# pbEncodage = "'{0}'".format("Androïd")
+# print pbEncodage
+'''
+Main
+'''
 os.chdir('./')
 # Récupération du Json
 jsonData = getJson('bookmarks.json')
