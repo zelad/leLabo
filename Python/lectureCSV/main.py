@@ -17,7 +17,7 @@ en cas de fichier CSV spécifique, utiliser:
     csv.reader(datasCSV, delimiter=';', quotechar='"')
     '''
     c.writerow(["Nom","Adresse","Telephone","Fax","Courriel","Autres"])
-    c.writerow(["beck","Lille","mon 06","mon 03Fax","zelda@hyrule.com","un truc..."])
+    c.writerow(["kiki","Lille","mon 06","mon 03Fax","zelda@hyrule.com","un truc..."])
 
 # lecture:
 with open("MONFICHIER.csv","rb") as datasFile:
