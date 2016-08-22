@@ -1,6 +1,6 @@
 '''
 Created on 30 juil. 2016
-
+@Notes: voir aussi le projet "FFBookMark_DB" sur gitLab
 @author: Kiki
 '''
 import gitlab
