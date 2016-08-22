@@ -5,7 +5,7 @@ Created on 18 août 2016
 
 @author: rbeck
 '''
-import os,codecs
+import os,codecs, json
 
 listCat = []
 fileUrl = "../conf"#nom du fichier (pas besoins d extention...)
@@ -18,4 +18,9 @@ with codecs.open(fileUrl,"r","utf-8") as dataFile:
         catego = data.split("\r\n")
         listCat.append(catego[0])
 #         aFile.close()
+#Ecriture
+aDict = dict()
+objJson = json.dumps(aDict)
+with open(fileUrl,"wb") as datasJson:
+    datasJson.write(objJson)
 
