@@ -13,6 +13,16 @@ import sys
 
 from NodeBookM import NodeBookM
 
+'''
+Donne la dernière ID enregistré
+'''
+def lastID():
+    con = lite.connect('bookMark.db')
+    cur = con.cursor()
+    lid = cur.lastrowid
+    print lid
+    con.close()
+    
 def setDB(node,cur):
     global countBP
     if node.type.find('text/x-moz-place-container') != -1:
