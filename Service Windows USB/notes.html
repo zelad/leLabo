@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Le Labo</title>
+</head>
+<body>
+<h2 id="pour-avoir-toujours-la-même-lettre-sur-une-clef-usb">Pour avoir toujours la même lettre sur une clef USB</h2>
+
+<p>Utiliser le prog <a href="http://www.uwe-sieber.de/usbdlm_e.html">USBDLM</a>.</p>
+
+<h3 id="configuration">Configuration:</h3>
+
+<p>Tout se passe dans le fichier <strong>USBDLM.ini</strong> se trouvant dans le dossier de USBDLM (au mieux dans <code>racine/programmes</code></p>
+
+<ul>
+<li><p>pour afficher le <strong>log</strong>:</p>
+
+<pre><code>[Settings]
+...
+WriteLogFile=1
+</code></pre>
+
+<p>ce fichier s’écrira à la racine du <strong>root</strong></p></li>
+<li><p>pour attribuer une lettre en fonction du nom de la clef (qui sera afficher dans le fichier log)</p>
+
+<pre><code>[DriveLetters]
+...
+Volume Name = \\?\Volume{72xxx31-97d8-11e6-8926-80xxxe6963}\
+Letters=R
+</code></pre>
+
+<p>Ne pas oublier de stop/start le service pour que ceci prenne effet!</p></li>
+</ul>
+</body>
