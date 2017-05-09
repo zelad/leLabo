@@ -1,6 +1,6 @@
-##Pour avoir toujours la même lettre sur une clef USB
+## Pour avoir toujours la même lettre sur une clef USB
 Utiliser le prog [USBDLM](http://www.uwe-sieber.de/usbdlm_e.html).
-###Configuration:
+### Configuration:
 Tout se passe dans le fichier **USBDLM.ini** se trouvant dans le dossier de USBDLM (au mieux dans ```racine/programmes```
 
 * pour afficher le **log**:
