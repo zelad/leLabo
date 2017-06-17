@@ -21,3 +21,8 @@ if __name__ == '__main__':
 #     print(data["maps"][0]["id"])
 #     pprint(data["masks"]["id"])
 #     pprint(data["om_points"])
+    '''
+    ' Pour Dict -> Json
+    '''
+    aDict = dict()
+    objJson = json.dumps(aDict)
