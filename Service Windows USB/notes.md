@@ -15,6 +15,11 @@ ce fichier s'écrira à la racine du **root**
 		...
 		Volume Name = \\?\Volume{72bxxx1-97d8-11e6-8926-80xxx63}\
 		Letters=R
-	Ne pas oublier de stop/start le service pour que ceci prenne effet!
-	
+Ne pas oublier de **stop/start** le service pour que ceci prenne effet!
+### Pour le lancement auto:
+lancer ```racine/programmes/_service_register```
+
+### Pour identifier le numéro de volume:
+lancer dans ```racine/programmes/UsbDriveInfo.exe``` 
+
 Plus d'info sur la config et les conditions [ici](http://www.uwe-sieber.de/usbdlm_help_e.html#by_criteria)
