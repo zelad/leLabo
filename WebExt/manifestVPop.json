@@ -1,0 +1,31 @@
+{
+/*
+Il semblerait que popUp et script de background
+ne peuvent pas cohabiter!
+*/
+  "manifest_version": 2,
+  "name": "OneBrakeOneByClic",
+  "version": "1.0",
+
+  "description": "un clic sur le bouton = 1 favoris en [1]",
+
+  "icons": {
+    "48": "icons/BMButton.png"
+  },
+
+  "permissions": [
+    "background",
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/BMButton.png",
+    "default_title": "Un p'tit Favoris??",
+    "default_popup": "goToBookM.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}
