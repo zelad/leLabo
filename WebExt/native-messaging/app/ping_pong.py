@@ -57,8 +57,9 @@ def sendMessage(encodedMessage):
     sys.stdout.write(encodedMessage['length'])
     sys.stdout.write(encodedMessage['content'])
     sys.stdout.flush()
-
+print("start")
 while True:
     receivedMessage = getMessage()
     if receivedMessage == "ping":
+        print("ping recu")
         sendMessage(encodeMessage("pong2"))
