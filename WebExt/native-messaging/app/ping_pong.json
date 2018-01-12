@@ -1,7 +1,7 @@
 {
   "name": "ping_pong",
   "description": "Example host for native messaging",
-  "path": "D://Doc//Projet//GitCode//leLabo//WebExt//native-messaging//app//ping_pong_win.bat",
+  "path": "D:\\Doc\\Projet\\GitCode\\leLabo\\WebExt\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
   "allowed_extensions": [ "ping_pong@example.org" ]
 }
